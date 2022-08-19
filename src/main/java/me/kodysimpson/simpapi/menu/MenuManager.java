@@ -26,7 +26,7 @@ public class MenuManager {
 
         boolean isAlreadyRegistered = false;
         for (RegisteredListener rl : InventoryClickEvent.getHandlerList().getRegisteredListeners()) {
-            System.out.println(rl.getListener().getClass().getSimpleName());
+//            System.out.println(rl.getListener().getClass().getSimpleName());
             if (rl.getListener() instanceof MenuListener) {
                 isAlreadyRegistered = true;
                 break;
@@ -62,7 +62,7 @@ public class MenuManager {
      */
     public static void setup(Server server, Plugin plugin) {
 
-        System.out.println("MENU MANAGER HAS BEEN SETUP");
+//        System.out.println("MENU MANAGER HAS BEEN SETUP");
 
         registerMenuListener(server, plugin);
         //registerPlayerMenuUtility(playerMenuUtilityClass);
@@ -98,7 +98,7 @@ public class MenuManager {
 //
 //    }
 
-    public static PlayerMenuUtility getPlayerMenuUtility(Player p) throws MenuManagerException, MenuManagerNotSetupException {
+    public static PlayerMenuUtility getPlayerMenuUtility(Player p) throws MenuManagerNotSetupException {
 
         if (!isSetup) {
             throw new MenuManagerNotSetupException();
