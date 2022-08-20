@@ -22,6 +22,8 @@ public abstract class PaginatedMenu extends Menu {
     //that the loop is on
     protected int index = 0;
 
+    public ItemStack FILLER = super.FILLER_GLASS;
+
     public PaginatedMenu(PlayerMenuUtility playerMenuUtility) {
         super(playerMenuUtility);
     }
@@ -47,26 +49,26 @@ public abstract class PaginatedMenu extends Menu {
      */
     protected void addMenuBorder() {
 
-        inventory.setItem(48, makeItem(Material.DARK_OAK_BUTTON, ChatColor.GREEN + "Left"));
-        inventory.setItem(49, makeItem(Material.BARRIER, ChatColor.DARK_RED + "Close"));
-        inventory.setItem(50, makeItem(Material.DARK_OAK_BUTTON, ChatColor.GREEN + "Right"));
+        inventory.setItem(48, getPreviousItem());
+        inventory.setItem(49, getCloseItem());
+        inventory.setItem(50, getNextItem());
 
         for (int i = 0; i < 10; i++) {
             if (inventory.getItem(i) == null) {
-                inventory.setItem(i, super.FILLER_GLASS);
+                inventory.setItem(i, FILLER);
             }
         }
 
-        inventory.setItem(17, super.FILLER_GLASS);
-        inventory.setItem(18, super.FILLER_GLASS);
-        inventory.setItem(26, super.FILLER_GLASS);
-        inventory.setItem(27, super.FILLER_GLASS);
-        inventory.setItem(35, super.FILLER_GLASS);
-        inventory.setItem(36, super.FILLER_GLASS);
+        inventory.setItem(17, FILLER);
+        inventory.setItem(18, FILLER);
+        inventory.setItem(26, FILLER);
+        inventory.setItem(27, FILLER);
+        inventory.setItem(35, FILLER);
+        inventory.setItem(36, FILLER);
 
         for (int i = 44; i < 54; i++) {
             if (inventory.getItem(i) == null) {
-                inventory.setItem(i, super.FILLER_GLASS);
+                inventory.setItem(i, FILLER);
             }
         }
 
@@ -99,6 +101,22 @@ public abstract class PaginatedMenu extends Menu {
         }
 
 
+    }
+
+    public ItemStack getNextItem() {
+        return makeItem(Material.DARK_OAK_BUTTON, ChatColor.GREEN + "Next ->");
+    }
+
+    public ItemStack getPreviousItem() {
+        return makeItem(Material.DARK_OAK_BUTTON, ChatColor.GREEN + "<- Previous");
+    }
+
+    public ItemStack getCloseItem() {
+        return makeItem(Material.BARRIER, ChatColor.DARK_RED + "Close");
+    }
+
+    public void setFiller(ItemStack filler) {
+        FILLER = filler;
     }
 
     /**
