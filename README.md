@@ -1,5 +1,7 @@
 # SimpAPI v4.4.1
 
+## This API is originally made by [Cortex MC](https://github.com/Cortex-MC). ([GitHub Repo](https://github.com/Cortex-MC/SimpAPI))
+
 ## Table Of Contents:
 ****
 - [Introduction](#introduction)
@@ -254,5 +256,3 @@ These enumerators can be passed into the PMC instead of a String key, they will 
 
 ## Command Manager
 *Video*: https://youtu.be/NFYg9Tmk-vo
-
-## This API is originally made by [Kody Simpson](https://github.com/KodySimpson).
