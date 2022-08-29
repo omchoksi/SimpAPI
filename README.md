@@ -37,9 +37,9 @@ JavaDocs: https://kodysimpson.github.io/SimpAPI/index.html
 #### Dependency
 ```xml
 <dependency>
-    <groupId>com.github.KodySimpson</groupId>
+    <groupId>me.d3v1s0m</groupId>
     <artifactId>SimpAPI</artifactId>
-    <version>4.3.2</version>
+    <version>4.4.1</version>
 </dependency>
 ```
 
@@ -65,7 +65,7 @@ repositories {
 Groovy/Kotlin:
 ```groovy
 dependencies {
-    implementation 'com.github.KodySimpson:SimpAPI:4.3.2'
+    implementation 'me.d3v1s0m:SimpAPI:4.4.1'
 }
 ```
 
