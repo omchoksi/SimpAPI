@@ -254,3 +254,5 @@ These enumerators can be passed into the PMC instead of a String key, they will 
 
 ## Command Manager
 *Video*: https://youtu.be/NFYg9Tmk-vo
+
+## This API is originally made by [Kody Simpson](https://github.com/KodySimpson).
