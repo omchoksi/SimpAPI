@@ -1,4 +1,4 @@
-# SimpAPI v4.4.0
+# SimpAPI v4.4.1
 
 ## Table Of Contents:
 ****
